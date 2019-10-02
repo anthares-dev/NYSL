@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Output registration form</title>
+    <link rel="stylesheet" href="./styles/nysl_3.css" />
+    <!-- Add external-icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Add fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-container">
+          <img src="./images/nysl_logo.png" alt="NYSL logo" class="logo" />
+          <h1 class="title">Northside Youth Soccer League</h1>
+        </div>
+      </div>
+      <nav id="nav">
+        <!-- Responsive -->
+        <a href="#" class="mobile">
+          <img
+            src="./images/ham.svg"
+            alt="toggle menu"
+            class="menu"
+            id="menu"
+          />
+        </a>
+
+        <ul>
+          <li class="active" href="javascript:void(0)">Output</li>
+          <li>
+            <a href="./index.html" href="javascript:void(0)">go back to Home</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-image-reg"><!-- Image in background--></div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h2 class="page-title">You have a new member!</h2>
+        <div class="flex-row-center">
+          <article>
+            <h3 align="center">
+              The following information has been sent as your feedback:
+            </h3>
+
+            <table class="output">
+              <tr>
+                <th>Form Field</th>
+                <th>Field Value</th>
+              </tr>
+
+              <script language="javascript">
+                var args = location.search.substr(1).split("&");
+                for (var i = 0; i < args.length; ++i) {
+                  var parts = args[i].split("=");
+                  if (parts != null) {
+                    var field = parts[0];
+                    var value = parts[1];
+                    if (value == null) {
+                      value = "null";
+                    } else {
+                      value = '"' + unescape(value.replace(/\+/g, " ")) + '"';
+                    }
+
+                    document.writeln(
+                      '<tr><td class="td-right">' + field + "</td>"
+                    );
+                    document.writeln("<td>" + value + "</td></tr>");
+                  }
+                }
+              </script>
+
+              <noscript>
+                <tr>
+                  <td>
+                    <p>You need to turn on Javascript in your browser.</p>
+
+                    <p>In Microsoft Internet Explorer 4 or greater:</p>
+                    <ul>
+                      <li>
+                        From the "Tools" menu (in IE 4, it's the "View" menu),
+                        select "Internet Options".
+                      </li>
+                      <li>Click on the "Security" tab.</li>
+                      <li>
+                        Click on the "Custom Level" button. (In IE 4, select
+                        "Custom" and then click on "Settings...".)
+                      </li>
+                      <li>
+                        Under "Active scripting" make sure "Enable" is selected.
+                      </li>
+                    </ul>
+
+                    <p>In Netscape version 4 or greater:</p>
+                    <ul>
+                      <li>
+                        From the <b>Edit</b> menu, select <b>Preferences</b>.
+                      </li>
+                      <li>
+                        In the <b>Category</b> list on the left, click on the
+                        word "Advanced".
+                      </li>
+                      <li>
+                        In the panel on the right, make sure "Enable JavaScript"
+                        is checked.
+                      </li>
+                      <li>Click the <b>OK</b> button.</li>
+                    </ul>
+                  </td>
+                </tr>
+              </noscript>
+            </table>
+          </article>
+        </div>
+      </div>
+      <!-- end container for article, ecc-->
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div>
+          <div class="social-buttons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+          </div>
+        </div>
+
+        <div>
+          <p>
+            © 2019 Northside Youth Soccer.<br />
+            All Rights Reserved.
+            <br />
+            <a href="#">Privacy Policy</a>
+          </p>
+        </div>
+
+        <div>
+          <p class="address">
+            2101 N. Fremont St.<br />
+            Chicago, IL 60614
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.onscroll = function() {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("nav");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>

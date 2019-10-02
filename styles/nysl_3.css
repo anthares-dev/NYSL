@@ -1,0 +1,791 @@
+/* Add fonts */
+
+@font-face {
+  font-family: "soccer-collage"; /* H1 Title */
+  src: url(../fonts/SoccerLeagueCollege.ttf); /*URL to font*/
+}
+
+@font-face {
+  font-family: "apex"; /* H2-H3-H4 headers */
+  src: url(../fonts/ApexMk2-Regular.otf); /*URL to font*/
+}
+
+/* GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0px solid black;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif; /* Montserrat main font exept headers*/
+  background-image: url("../images/background.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: auto 4150px;
+}
+header {
+  width: 70%; /* using % for a responsive layout */
+  margin: 0em auto;
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+  color: rgb(3, 57, 73);
+  text-align: left;
+}
+
+footer {
+  width: 70%;
+  margin: 0em auto 2em auto;
+  padding-top: 4em;
+  background-color: rgb(3, 57, 73);
+  color: white;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "apex";
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+p,
+blockquote {
+  font-size: 1.4em;
+  line-height: 1.4em;
+  padding-bottom: 1em;
+}
+
+a {
+  color: rgb(5, 88, 110);
+  text-decoration: underline;
+}
+a:hover {
+  color: rgb(164, 255, 74);
+}
+
+ul,
+ol,
+li {
+  font-size: 1em;
+}
+
+.container {
+  padding: 1em 2em;
+  width: 95%; /* necessary for gallery in flexbox */
+}
+/* END GLOBAL */
+
+/* local styles */
+
+.mark {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.max-width {
+  width: 100%;
+}
+/* END local styles */
+
+/* HEADER */
+.header-container {
+  display: flex;
+  align-items: center; /* align logo with title */
+}
+.logo {
+  width: 160px;
+  height: 160px;
+  margin-right: 2em;
+  animation: spin 10s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.title {
+  font-family: "soccer-collage";
+  color: rgb(3, 57, 73);
+  font-size: 4.6em;
+  font-weight: normal;
+}
+
+.title:hover {
+  -webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #ffffff;
+  -webkit-fill-color: #ffffff;
+  text-shadow: 1px 0px 20px rgb(164, 255, 74);
+}
+
+#nav {
+  overflow: hidden;
+}
+
+nav ul {
+  overflow: hidden;
+  background-color: rgb(3, 57, 73);
+  color: white;
+  border-top: 3px solid rgb(164, 255, 74); /* how to make a single selector ? */
+  border-bottom: 3px solid rgb(164, 255, 74);
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  font-family: "apex";
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+  padding: 0.5em 1em;
+  display: inline-block;
+}
+nav li a {
+  color: white;
+  text-decoration: none;
+}
+nav li a:hover {
+  -webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #ffffff;
+  -webkit-fill-color: #ffffff;
+  text-shadow: 1px 0px 20px rgb(164, 255, 74);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 70%;
+}
+
+.sticky + .header-image,
+.sticky + .header-image-about,
+.sticky + .header-image-gameinfo,
+.sticky + .header-image-rules,
+.sticky + .header-image-reg,
+.sticky + .header-image-contact {
+  margin-top: 62px;
+}
+
+.active {
+  background-color: rgb(103, 161, 45);
+}
+.mobile {
+  display: none;
+}
+
+.header-image {
+  background-image: url("../images/design2_image1.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+}
+
+.header-image-about {
+  background-image: url("../images/iStock_000012057009Large\ \(2\).jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+}
+
+.header-image-gameinfo {
+  background-image: url("../images/soccer-field-background-6.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+}
+
+.header-image-rules {
+  background-image: url("../images/football-1350720_960_720.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+}
+
+.header-image-reg {
+  background-image: url("../images/2014-06-24_aof_10859_rgb.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+}
+
+.header-image-contact {
+  background-image: url("../images/Youth-Soccer---Soccer-Leagues-at-the-YMCA.gif");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+}
+
+/* END HEADER */
+
+/* MAIN */
+h2.page-title {
+  font-size: 2.4em;
+  border-bottom: 1px solid rgba(3, 57, 73, 0.507);
+  font-style: italic;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+article,
+aside {
+  padding: 1em;
+}
+
+article h3 {
+  font-size: 2em;
+  font-style: italic;
+  font-weight: normal;
+  text-transform: none;
+}
+
+section {
+  padding: 1em 0;
+}
+
+section h4 {
+  font-size: 1.6em;
+  font-style: italic;
+  font-weight: normal;
+  text-transform: none;
+}
+
+aside .image-home {
+  background-image: url("../images/26756557422_48450f58ba_b.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 400px;
+  margin: 1em 1em 0 0;
+  border: 1px solid rgb(3, 57, 73);
+}
+
+aside .image-contact {
+  background-image: url("../images/iw5dcnit-3bvy04a.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 400px;
+  margin: 1em 1em 0 0;
+  border: 1px solid rgb(3, 57, 73);
+}
+
+/* DEPRECATED
+section h4 {
+  font-weight: bold;
+  font-size: 1.4em;
+  text-transform: none;
+}
+*/
+
+/* media container blue section*/
+.media-container {
+  background: rgb(5, 86, 110);
+  color: #ffffff;
+  margin: 5% auto -2% auto;
+  padding: 2em 0;
+  border-top-left-radius: 40px;
+  transform: skewY(-2deg);
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-content: center;
+}
+.media-container:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: rgb(5, 86, 110);
+  position: absolute;
+  top: -39px;
+  right: 0;
+  z-index: -2;
+}
+.media-container:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.adjust-skew {
+  /* adjust the child elements */
+  transform: skewY(2deg);
+}
+
+.media-container h3 {
+  font-size: 2em;
+  padding-bottom: 1em;
+}
+
+.media-container h4 {
+  font-size: 1.6em;
+  padding-bottom: 0.5em;
+  margin-top: -1em;
+}
+
+/* gallery images in index.html */
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.block {
+  border: 1px solid rgb(3, 57, 73);
+  width: 180px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.block:hover {
+  border: 1px solid rgb(164, 255, 74);
+}
+
+.block .image1 {
+  background-image: url("../images/soccer_image1.jpeg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 260px;
+}
+
+.block .image2 {
+  background-image: url("../images/soccer_image2.jpeg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 260px;
+}
+
+.block .image3 {
+  background-image: url("../images/soccer_image3.jpeg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 260px;
+}
+
+.block .image4 {
+  background-image: url("../images/soccer_image4.jfif");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 260px;
+}
+
+.block .image5 {
+  background-image: url("../images/soccer_image5.jfif");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 260px;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+/* END gallery images in index.html */
+
+/* figure quotes in about.html */
+.figure {
+  width: 400px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+figcaption {
+  font-weight: bold;
+  color: #67a12d;
+}
+
+/* DEPRECATED
+li.figure {
+  margin: 0 2em;
+  float: left;
+  width: 40%;
+  text-align: center;
+}
+*/
+
+/*END media container blue section*/
+
+/* table in game_info.html*/
+
+table {
+  width: 100%;
+  font-size: 150%;
+  margin-bottom: 1em;
+}
+
+.first-row {
+  text-decoration: underline;
+}
+
+.first-column {
+  min-width: 160px;
+}
+
+td.indent {
+  text-indent: 1.4em;
+}
+
+/* Rules in rules.html*/
+
+.rules-header h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  text-transform: none;
+}
+
+.rules-header h4 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6em;
+  padding-bottom: 1em;
+}
+
+.rules-header p {
+  text-align: center;
+}
+
+.rules-content {
+  font-size: 120%;
+}
+
+.rules-content h4 {
+  font-weight: bold;
+  font-size: 1.4em;
+  padding-top: 1em;
+}
+
+.rules-content ul,
+ol {
+  margin-left: 1.2em;
+}
+
+.squared-list {
+  list-style-type: square;
+}
+
+.alpha-list {
+  list-style-type: lower-alpha;
+  text-indent: 0em;
+}
+
+ol.alpha-list {
+  margin-left: 2em;
+}
+
+ol.alpha-list li {
+  padding-bottom: 0;
+}
+
+.circled-list {
+  list-style-type: circle;
+  text-indent: 0em;
+}
+
+ol.numbered-list {
+  counter-reset: item;
+  margin-left: 2em;
+  text-indent: -1em;
+}
+
+ol.numbered-list > li {
+  counter-increment: item;
+  list-style-type: none;
+}
+
+ol.numbered-list > li:before {
+  font-weight: bold;
+  content: counter(item) ".";
+}
+
+.numbered-list li {
+  padding-bottom: 1em;
+}
+
+li.none {
+  list-style-type: none;
+}
+
+/* registration form */
+.form {
+  margin: 1.6em 1.8em;
+  font-size: 120%;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.8em;
+}
+
+.form-col h3 {
+  margin-bottom: 0.6em;
+  font-size: 1.2em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-col h4 {
+  margin-bottom: 0.6em;
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0.8em;
+  flex-grow: 1;
+}
+
+.form-row input {
+  margin-left: 1em;
+}
+
+input:focus {
+  background-color: lightblue;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+  flex-grow: 1;
+  min-width: 20px;
+  margin-right: 1em;
+  border-bottom: 1px solid rgba(3, 57, 73, 0.507);
+}
+
+input[type="tel"] {
+  flex-grow: 0.5;
+  min-width: 20px;
+  margin-right: 1em;
+  border-bottom: 1px solid rgba(3, 57, 73, 0.507);
+}
+
+input[type="number"] {
+  flex-grow: 0.1;
+  min-width: 20px;
+  margin-right: 1em;
+  border-bottom: 1px solid rgba(3, 57, 73, 0.507);
+}
+
+input[type="radio"] {
+  flex-grow: 1;
+  margin: 0 1em 0 0.6em;
+  width: 1em;
+  height: 1em;
+}
+
+input[type="checkbox"] {
+  flex-grow: 1;
+  width: 0.8em;
+  height: 0.8em;
+}
+
+span input[type="checkbox"] {
+  flex-grow: 1;
+  margin: 0 0.4em 0 1em;
+  width: 0.8em;
+  height: 0.8em;
+}
+
+input[type="radio"].grade {
+  margin: 0 0.4em 0 1.2em;
+  width: 1em;
+  height: 1em;
+}
+
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #67a12d;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+.blank1 {
+  border-bottom: 0px solid rgba(3, 57, 73, 0.507);
+  flex-grow: 1;
+}
+
+.blank01 {
+  border-bottom: 0px solid rgba(3, 57, 73, 0.507);
+  flex-grow: 0.1;
+}
+
+.blank04 {
+  border-bottom: 0px solid rgba(3, 57, 73, 0.507);
+  flex-grow: 0.4;
+}
+
+.blank002 {
+  border-bottom: 0px solid rgba(3, 57, 73, 0.507);
+  flex-grow: 0.02;
+}
+
+/* Output registration form */
+
+table.output {
+  border: 2px solid rgba(3, 57, 73, 0.507);
+  text-align: center;
+  width: 226;
+  margin-top: 1em;
+}
+
+table.output th {
+  border-bottom: 2px solid rgba(3, 57, 73, 0.507);
+}
+
+table.output td {
+  border-bottom: 1px solid rgba(3, 57, 73, 0.507);
+}
+
+table.output td.td-right {
+  border-right: 1px solid rgba(3, 57, 73, 0.507);
+}
+
+/* FOOTER */
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 0em 0 1em 0;
+}
+
+.footer-container a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-container a:hover {
+  color: rgb(164, 255, 74);
+}
+
+.social-buttons {
+  align-content: center;
+}
+
+.fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-instagram {
+  background: #f40083;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}

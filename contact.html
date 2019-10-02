@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="./styles/nysl_3.css" />
+    <!-- Add external-icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Add fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-container">
+          <img src="./images/nysl_logo.png" alt="NYSL logo" class="logo" />
+          <h1 class="title">Northside Youth Soccer League</h1>
+        </div>
+      </div>
+      <nav id="nav">
+        <!-- Responsive -->
+        <a href="#" class="mobile">
+          <img
+            src="./images/ham.svg"
+            alt="toggle menu"
+            class="menu"
+            id="menu"
+          />
+        </a>
+
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./game_info.html">The Game</a></li>
+          <li><a href="./rules.html">Rules</a></li>
+          <li><a href="./registration.html">Registration</a></li>
+          <li class="active">Contact</li>
+        </ul>
+      </nav>
+
+      <div class="header-image-contact"><!-- Image in background--></div>
+    </header>
+    <main>
+      <div class="container">
+        <h2 class="page-title">Contact us</h2>
+        <div class="flex-row">
+          <article>
+            <section>
+              <h3>Issue with "registration form"?</h3>
+              <p>
+                Click and download the
+                <a
+                  href="./documents/Registration_Form.pdf"
+                  download="Registration form"
+                  title="Click here to download the document."
+                  >registration form</a
+                >
+                in pdf version.
+              </p>
+              <p>Fulfill and send to us.</p>
+            </section>
+            <section>
+              <h3>Request Information</h3>
+              <p>
+                Please email us at
+                <a
+                  href="mailto:nysl@chisoccer.org?subject=Request%20information"
+                  title="Click here to send an email."
+                  >nysl@chisoccer.org</a
+                >
+              </p>
+              <p>We will reply to your email as soon as we can.</p>
+            </section>
+          </article>
+          <aside>
+            <div class="image-contact"></div>
+          </aside>
+        </div>
+      </div>
+      <!-- end main container for article, ecc-->
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div>
+          <div class="social-buttons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+          </div>
+        </div>
+
+        <div>
+          <p>
+            © 2019 Northside Youth Soccer.<br />
+            All Rights Reserved.
+            <br />
+            <a href="#">Privacy Policy</a>
+          </p>
+        </div>
+
+        <div>
+          <p class="address">
+            2101 N. Fremont St.<br />
+            Chicago, IL 60614
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.onscroll = function() {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("nav");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>

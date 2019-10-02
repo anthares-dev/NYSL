@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./styles/nysl_3.css" />
+    <!-- Add external-icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Add fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-container">
+          <img src="./images/nysl_logo.png" alt="NYSL logo" class="logo" />
+          <h1 class="title">Northside Youth Soccer League</h1>
+        </div>
+      </div>
+      <nav id="nav">
+        <!-- Responsive -->
+        <a href="#" class="mobile">
+          <img
+            src="./images/ham.svg"
+            alt="toggle menu"
+            class="menu"
+            id="menu"
+          />
+        </a>
+
+        <ul>
+          <li class="active" href="javascript:void(0)">Home</li>
+          <li><a href="./about.html" href="javascript:void(0)">About</a></li>
+          <li>
+            <a href="./game_info.html" href="javascript:void(0)">The Game</a>
+          </li>
+          <li><a href="./rules.html" href="javascript:void(0)">Rules</a></li>
+          <li>
+            <a href="./registration.html" href="javascript:void(0)"
+              >Registration</a
+            >
+          </li>
+          <li>
+            <a href="./contact.html" href="javascript:void(0)">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-image"><!-- Image in background--></div>
+    </header>
+    <main>
+      <div class="container">
+        <h2 class="page-title">Upcoming Events</h2>
+        <div class="flex-row">
+          <article>
+            <section>
+              <h3>August 4</h3>
+              <p>NYSL Fundraiser</p>
+            </section>
+            <section>
+              <h3>August 16</h3>
+              <p>Season Kickoff: Meet the Teams</p>
+            </section>
+            <section>
+              <h3>September 1</h3>
+              <p>
+                First Game of the Season
+                <a
+                  href="./documents/Game_Info.pdf"
+                  download="Game schedule"
+                  title="Click here to download the document."
+                  >(Check Game Schedule for details)</a
+                >
+              </p>
+            </section>
+          </article>
+          <aside>
+            <div class="image-home"></div>
+          </aside>
+        </div>
+      </div>
+      <!-- end container for article, ecc-->
+
+      <!-- start media container for image gallery, ecc-->
+      <div class="media-container">
+        <div class="container">
+          <div class="adjust-skew">
+            <h3>Image Gallery</h3>
+            <div class="gallery">
+              <div class="block">
+                <a target="_blank" href="./images/soccer_image1.jpeg"
+                  ><div class="image1"></div
+                ></a>
+                <div class="desc">Jacob</div>
+              </div>
+              <div class="block">
+                <a target="_blank" href="./images/soccer_image2.jpeg"
+                  ><div class="image2"></div>
+                </a>
+                <div class="desc">Natalie and Emily</div>
+              </div>
+
+              <div class="block">
+                <a target="_blank" href="./images/soccer_image3.jpeg"
+                  ><div class="image3"></div>
+                </a>
+                <div class="desc">Samuel</div>
+              </div>
+
+              <div class="block">
+                <a target="_blank" href="./images/soccer_image4.jfif"
+                  ><div class="image4"></div>
+                </a>
+                <div class="desc">Lily</div>
+              </div>
+
+              <div class="block">
+                <a target="_blank" href="./images/soccer_image5.jfif"
+                  ><div class="image5"></div>
+                </a>
+                <div class="desc">Sofia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div>
+          <div class="social-buttons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+          </div>
+        </div>
+
+        <div>
+          <p>
+            © 2019 Northside Youth Soccer.<br />
+            All Rights Reserved.
+            <br />
+            <a href="#">Privacy Policy</a>
+          </p>
+        </div>
+
+        <div>
+          <p class="address">
+            2101 N. Fremont St.<br />
+            Chicago, IL 60614
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.onscroll = function() {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("nav");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>

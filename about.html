@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About</title>
+    <link rel="stylesheet" href="./styles/nysl_3.css" />
+    <!-- Add external-icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Add fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-container">
+          <img src="./images/nysl_logo.png" alt="NYSL logo" class="logo" />
+          <h1 class="title">Northside Youth Soccer League</h1>
+        </div>
+      </div>
+      <nav id="nav">
+        <!-- Responsive -->
+        <a href="#" class="mobile">
+          <img
+            src="./images/ham.svg"
+            alt="toggle menu"
+            class="menu"
+            id="menu"
+          />
+        </a>
+
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li class="active">About</li>
+          <li><a href="./game_info.html">The Game</a></li>
+          <li><a href="./rules.html">Rules</a></li>
+          <li><a href="./registration.html">Registration</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-image-about"><!-- Image in background--></div>
+    </header>
+    <main>
+      <div class="container">
+        <h2 class="page-title">About NYSL</h2>
+        <article>
+          <section>
+            <h3>Mission</h3>
+            <p>
+              To support young athletes living in Chicago's northside
+              neighborhoods, who have an interest in learning and playing
+              soccer, with opportunities to learn and practice skills related to
+              the game of soccer, especially those skills related to team
+              cooperation and good sportsmanship.
+            </p>
+          </section>
+          <section>
+            <h3>Vision</h3>
+            <p>
+              The Northside Youth Soccer League aspires to develop strong,
+              well-rounded, and mindful athletes through the building of
+              character, self-discipline, and leadership.
+            </p>
+          </section>
+          <section>
+            <h3>General Info</h3>
+            <p>
+              The Northside Youth Soccer League was established in 1996 to
+              provide athletes residing in Chicago's northside neighborhood an
+              environment to learn and play soccer. To be a member of NYSL, you
+              must be between the ages of 4-12 and reside in a Chicago northside
+              neighborhood. NYSL is run by a small, full-time staff, and relies
+              on the generous volunteer time of parents and former league
+              members.)
+            </p>
+          </section>
+        </article>
+      </div>
+      <!-- end container for article, ecc-->
+
+      <!-- start media container for image gallery, ecc-->
+      <div class="media-container">
+        <div class="container">
+          <div class="adjust-skew">
+            <div class="gallery">
+              <div class="figure">
+                <figure>
+                  <img src="./images/user1.png" alt="Coach 1" />
+                  <blockquote>
+                    "Playing soccer with your feet is one thing, but playing
+                    soccer with your heart is another"
+                  </blockquote>
+                  <figcaption>-coach Jane Doe</figcaption>
+                </figure>
+              </div>
+
+              <div class="figure">
+                <figure>
+                  <img src="./images/user2.png" alt="Coach 2" />
+                  <blockquote>
+                    "A good Coach sees in you what you can't see in yourself"
+                  </blockquote>
+                  <figcaption>-coach Michael Randall</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div>
+          <div class="social-buttons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+          </div>
+        </div>
+
+        <div>
+          <p>
+            © 2019 Northside Youth Soccer.<br />
+            All Rights Reserved.
+            <br />
+            <a href="#">Privacy Policy</a>
+          </p>
+        </div>
+
+        <div>
+          <p class="address">
+            2101 N. Fremont St.<br />
+            Chicago, IL 60614
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.onscroll = function() {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("nav");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>
