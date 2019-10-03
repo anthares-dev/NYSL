@@ -20,22 +20,12 @@
   <body>
     <header>
       <div class="container">
-        <div class="header-container">
+          <div class="flex-row align-center">
           <img src="./images/nysl_logo.png" alt="NYSL logo" class="logo" />
           <h1 class="title">Northside Youth Soccer League</h1>
         </div>
       </div>
       <nav id="nav">
-        <!-- Responsive -->
-        <a href="#" class="mobile">
-          <img
-            src="./images/ham.svg"
-            alt="toggle menu"
-            class="menu"
-            id="menu"
-          />
-        </a>
-
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
@@ -46,7 +36,7 @@
         </ul>
       </nav>
 
-      <div class="header-image-reg"><!-- Image in background --></div>
+      <div class="header-image reg"><!-- Image in background --></div>
     </header>
     <main>
       <div class="container">
@@ -56,59 +46,71 @@
         <div class="form">
           <form action="./show_data.html" method="GET">
             <!-- player's data -->
-            <div class="form-col">
-              <div class="form-row">
-                <div class="form-row">
+            <div class="flex-col">
+              <div class="flex-row">
+                <div class="halfwidth">
                   <label for="name">Player’s First Name:*</label>
                   <input type="text" id="name" name="name" required />
                 </div>
-                <div class="form-row">
+                <div class="halfwidth">
                   <label for="lastname">Last Name:*</label>
                   <input type="text" id="lastname" name="lastname" required />
                 </div>
               </div>
 
-              <div class="form-row">
+              <div class="flex-row">
                 <label for="street">Street Address:</label>
                 <input type="text" id="street" name="street adress" />
               </div>
 
-              <div class="form-row">
-                <div class="form-row">
+              <div class="flex-row">
+                <div class="halfwidth">
                   <label for="city">City*:</label>
                   <input type="text" id="city" name="city" required />
                 </div>
-                <div class="form-row">
+                <div class="halfwidth">
                   <label for="zipcode">Zip Code:</label>
                   <input type="text" id="zipcode" name="zipcode" />
                 </div>
               </div>
 
-              <div class="form-row">
-                <label for="birthday">Birthday:*</label>
-                <input type="date" id="birthday" name="birthday" required />
-                <div>
-                  Gender:*
-                  <label for="female">Female</label>
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="female"
-                    id="female"
-                  />
-                  <label for="male">Male</label>
-                  <input type="radio" name="gender" value="male" id="male" />
+              <div class="flex-row">
+                <div class="halfwidth">
+                  <label for="birthday">Birthday:*</label>
+                  <input type="date" id="birthday" name="birthday" required />
                 </div>
-                <div class="blank1"></div>
+                <div class="halfwidth">
+                  <span>
+                    Gender:*
+
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="female"
+                      id="female"
+                      class="radiobut"
+                    />
+                    <label for="female">Female</label>
+
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="male"
+                      id="male"
+                      class="radiobut"
+                    />
+                    <label for="male">Male</label>
+                  </span>
+                </div>
               </div>
 
-              <div class="form-row">
+              <div class="flex-row">
                 <span>
                   <label>Grade:*</label>
 
                   <input
                     type="radio"
-                    class="grade"
+                    class="radiobut"
                     name="grade"
                     value="pre-school"
                     id="pre-school"
@@ -118,7 +120,7 @@
 
                   <input
                     type="radio"
-                    class="grade"
+                    class="radiobut"
                     name="grade"
                     value="1st"
                     id="1st"
@@ -128,7 +130,7 @@
 
                   <input
                     type="radio"
-                    class="grade"
+                    class="radiobut"
                     name="grade"
                     value="2nd"
                     id="2nd"
@@ -138,7 +140,7 @@
 
                   <input
                     type="radio"
-                    class="grade"
+                    class="radiobut"
                     name="grade"
                     value="3rd"
                     id="3rd"
@@ -148,7 +150,7 @@
 
                   <input
                     type="radio"
-                    class="grade"
+                    class="radiobut"
                     name="grade"
                     value="4th"
                     id="4th"
@@ -158,7 +160,7 @@
 
                   <input
                     type="radio"
-                    class="grade"
+                    class="radiobut"
                     name="grade"
                     value="5th"
                     id="5th"
@@ -168,7 +170,7 @@
                 </span>
               </div>
 
-              <div class="form-row">
+              <div class="flex-row">
                 <label for="parent">Parent/Guardian:*</label>
                 <input
                   type="text"
@@ -178,20 +180,24 @@
                 />
               </div>
 
-              <div class="form-row">
-                <label for="phone">Contact phone:</label>
-                <input type="tel" id="phone" />
-                <label for="email">Contact mail:*</label>
-                <input type="email" id="email" required />
+              <div class="flex-row">
+                <div class="halfwidth">
+                  <label for="phone">Contact phone:</label>
+                  <input type="tel" id="phone" />
+                </div>
+                <div class="halfwidth">
+                  <label for="email">Contact mail:*</label>
+                  <input type="email" id="email" required />
+                </div>
               </div>
             </div>
             <!-- end player's data -->
 
             <!-- which school -->
-            <div class="form-col">
+            <div class="flex-col">
               <h3>Which elementary schools do you live near?</h3>
-              <div class="form-row">
-                <div class="form-col">
+              <div class="flex-row">
+                <div class="flex-col">
                   <h4 class="bold">First Closest School*</h4>
                   <select name="first closest school">
                     <option
@@ -251,7 +257,7 @@
 
                 <div class="blank01"></div>
 
-                <div class="form-col">
+                <div class="flex-col">
                   <h4 class="bold">Second Closest School</h4>
 
                   <select name="second closest school">
@@ -314,13 +320,13 @@
             <!-- end which school -->
 
             <!-- what position normally-->
-            <div class="form-col">
+            <div class="flex-col">
               <div>
                 <h3 class="bold">
                   What position(s) do you normally play? (check all that apply)
                 </h3>
               </div>
-              <div class="form-row">
+              <div class="flex-row">
                 <span
                   ><input
                     type="checkbox"
@@ -369,13 +375,13 @@
             <!-- end position normally -->
 
             <!-- what position want -->
-            <div class="form-col">
+            <div class="flex-col">
               <div>
                 <h3 class="bold">
                   What position(s) do you want to play? (check all that apply)
                 </h3>
               </div>
-              <div class="form-row">
+              <div class="flex-row">
                 <span
                   ><input
                     type="checkbox"
@@ -425,7 +431,7 @@
             <!-- end position want -->
 
             <!-- uniform -->
-            <div class="form-col">
+            <div class="flex-col">
               <h3>
                 <input
                   type="checkbox"
@@ -437,12 +443,12 @@
                 <label for="uniform"> Already Have a Uniform </label>
               </h3>
 
-              <div class="form-row">
-                <div class="form-col">
+              <div class="flex-row">
+                <div class="flex-col">
                   <h4>Jersey Size:</h4>
 
-                  <div class="form-row">
-                    <div class="form-col">
+                  <div class="flex-row">
+                    <div class="flex-col">
                       <span
                         ><input
                           type="radio"
@@ -488,7 +494,7 @@
                       </span>
                     </div>
 
-                    <div class="form-col">
+                    <div class="flex-col">
                       <span
                         ><input
                           type="radio"
@@ -527,10 +533,10 @@
 
                 <div class="blank04"></div>
 
-                <div class="form-col">
+                <div class="flex-col">
                   <h4>Shorts Size:</h4>
-                  <div class="form-row">
-                    <div class="form-col">
+                  <div class="flex-row">
+                    <div class="flex-col">
                       <span
                         ><input
                           type="radio"
@@ -576,7 +582,7 @@
                       </span>
                     </div>
 
-                    <div class="form-col">
+                    <div class="flex-col">
                       <span
                         ><input
                           type="radio"
@@ -617,7 +623,7 @@
             <!-- end uniform -->
 
             <!-- permission -->
-            <div class="form-col">
+            <div class="flex-col">
               <h3>Permission to Play</h3>
               <span
                 >Soccer League (NYSL). In recognizing the possibility of
@@ -639,7 +645,7 @@
               >
             </div>
 
-            <div class="form-row">
+            <div class="flex-row">
               <label for="signature">Parent/Guardian Signature:*</label>
               <input type="text" id="signature" required />
               <label for="today">Date:*</label>
@@ -649,9 +655,22 @@
             <!-- end permission -->
 
             <!-- submit button -->
-            <div class="form-row">
-              <button class="button" style="vertical-align:middle">
+            <div class="flex-row justify-spacebetw">
+              <button
+                class="sub-button"
+                style="vertical-align:middle"
+                type="submit"
+                value="Submit now!"
+              >
                 <span>Send </span>
+              </button>
+              <button
+                class="res-button"
+                style="vertical-align:middle"
+                type="reset"
+                value="Clear form"
+              >
+                <span>Reset </span>
               </button>
             </div>
             <!-- end submit button -->
@@ -663,33 +682,35 @@
     </main>
     <!-- end main container for article, ecc-->
     <footer>
-      <div class="footer-container">
-        <div>
-          <div class="social-buttons">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-youtube"></a>
+        <div class="container">
+        <div class="flex-row justify-spacear align-center wrap text-center">
+          <div>
+            <div class="social-buttons">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-youtube"></a>
+            </div>
+          </div>
+  
+          <div>
+            <p>
+              © 2019 Northside Youth Soccer.<br />
+              All Rights Reserved.
+              <br />
+              <a href="#">Privacy Policy</a>
+            </p>
+          </div>
+  
+          <div>
+            <p class="address">
+              2101 N. Fremont St.<br />
+              Chicago, IL 60614
+            </p>
           </div>
         </div>
-
-        <div>
-          <p>
-            © 2019 Northside Youth Soccer.<br />
-            All Rights Reserved.
-            <br />
-            <a href="#">Privacy Policy</a>
-          </p>
-        </div>
-
-        <div>
-          <p class="address">
-            2101 N. Fremont St.<br />
-            Chicago, IL 60614
-          </p>
-        </div>
       </div>
-    </footer>
+      </footer>
 
     <script>
       window.onscroll = function() {

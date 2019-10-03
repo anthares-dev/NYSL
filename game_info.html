@@ -20,21 +20,12 @@
   <body>
     <header>
       <div class="container">
-        <div class="header-container">
+          <div class="flex-row align-center">
           <img src="./images/nysl_logo.png" alt="NYSL logo" class="logo" />
           <h1 class="title">Northside Youth Soccer League</h1>
         </div>
       </div>
       <nav id="nav">
-        <!-- Responsive -->
-        <a href="#" class="mobile">
-          <img
-            src="./images/ham.svg"
-            alt="toggle menu"
-            class="menu"
-            id="menu"
-          />
-        </a>
 
         <ul>
           <li><a href="./index.html">Home</a></li>
@@ -46,7 +37,7 @@
         </ul>
       </nav>
 
-      <div class="header-image-gameinfo"><!-- Image in background--></div>
+      <div class="header-image gameinfo"><!-- Image in background--></div>
     </header>
     <main>
       <div class="container">
@@ -312,8 +303,8 @@
 
       <!-- start media container for image gallery, ecc-->
       <div class="media-container">
-        <div class="container">
-          <div class="adjust-skew">
+          <div class="container adjust-skew">
+
             <h4>Next game location</h4>
             <h3>Greenbay Elemetary</h3>
             <iframe
@@ -321,38 +312,40 @@
               height="360"
               class="max-width"
             ></iframe>
-          </div>
+         
         </div>
       </div>
     </main>
     <footer>
-      <div class="footer-container">
-        <div>
-          <div class="social-buttons">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-youtube"></a>
+        <div class="container">
+        <div class="flex-row justify-spacear align-center wrap text-center">
+          <div>
+            <div class="social-buttons">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-youtube"></a>
+            </div>
+          </div>
+  
+          <div>
+            <p>
+              © 2019 Northside Youth Soccer.<br />
+              All Rights Reserved.
+              <br />
+              <a href="#">Privacy Policy</a>
+            </p>
+          </div>
+  
+          <div>
+            <p class="address">
+              2101 N. Fremont St.<br />
+              Chicago, IL 60614
+            </p>
           </div>
         </div>
-
-        <div>
-          <p>
-            © 2019 Northside Youth Soccer.<br />
-            All Rights Reserved.
-            <br />
-            <a href="#">Privacy Policy</a>
-          </p>
-        </div>
-
-        <div>
-          <p class="address">
-            2101 N. Fremont St.<br />
-            Chicago, IL 60614
-          </p>
-        </div>
       </div>
-    </footer>
+      </footer>
 
     <script>
       window.onscroll = function() {

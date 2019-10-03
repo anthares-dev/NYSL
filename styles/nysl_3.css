@@ -87,6 +87,18 @@ li {
   padding: 1em 2em;
   width: 95%; /* necessary for gallery in flexbox */
 }
+
+.flex-row {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
 /* END GLOBAL */
 
 /* local styles */
@@ -103,6 +115,35 @@ li {
 .max-width {
   width: 100%;
 }
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-spacebetw {
+  justify-content: space-between;
+}
+
+.halfwidth {
+  display: flex;
+  width: 50%;
+}
+
+.justify-spacear {
+  justify-content: space-around;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
+}
 /* END local styles */
 
 /* HEADER */
@@ -116,16 +157,7 @@ li {
   margin-right: 2em;
   animation: spin 10s linear infinite;
 }
-@-moz-keyframes spin {
-  100% {
-    -moz-transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
+
 @keyframes spin {
   100% {
     transform: rotate(360deg);
@@ -147,8 +179,8 @@ li {
 
 #nav {
   overflow: hidden;
+  z-index: 3;
 }
-
 nav ul {
   overflow: hidden;
   background-color: rgb(3, 57, 73);
@@ -183,68 +215,40 @@ nav li a:hover {
   width: 70%;
 }
 
-.sticky + .header-image,
-.sticky + .header-image-about,
-.sticky + .header-image-gameinfo,
-.sticky + .header-image-rules,
-.sticky + .header-image-reg,
-.sticky + .header-image-contact {
+.sticky + .header-image {
   margin-top: 62px;
 }
 
 .active {
   background-color: rgb(103, 161, 45);
 }
-.mobile {
-  display: none;
-}
 
 .header-image {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+}
+.header-image.home {
   background-image: url("../images/design2_image1.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 280px;
 }
-
-.header-image-about {
+.header-image.about {
   background-image: url("../images/iStock_000012057009Large\ \(2\).jpg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 280px;
 }
-
-.header-image-gameinfo {
+.header-image.gameinfo {
   background-image: url("../images/soccer-field-background-6.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 280px;
 }
 
-.header-image-rules {
+.header-image.rules {
   background-image: url("../images/football-1350720_960_720.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 280px;
 }
 
-.header-image-reg {
+.header-image.reg {
   background-image: url("../images/2014-06-24_aof_10859_rgb.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 280px;
 }
 
-.header-image-contact {
+.header-image.contact {
   background-image: url("../images/Youth-Soccer---Soccer-Leagues-at-the-YMCA.gif");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 280px;
 }
 
 /* END HEADER */
@@ -256,22 +260,9 @@ h2.page-title {
   font-style: italic;
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.flex-row-center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
 article,
-aside {
+aside,
+section {
   padding: 1em;
 }
 
@@ -282,9 +273,6 @@ article h3 {
   text-transform: none;
 }
 
-section {
-  padding: 1em 0;
-}
 
 section h4 {
   font-size: 1.6em;
@@ -293,35 +281,23 @@ section h4 {
   text-transform: none;
 }
 
-aside .image-home {
+aside .image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 400px;
+  margin: 1em 1em 0 0;
+  border: 1px solid rgb(3, 57, 73);
+}
+
+aside .image.home {
   background-image: url("../images/26756557422_48450f58ba_b.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px;
-  width: 400px;
-  margin: 1em 1em 0 0;
-  border: 1px solid rgb(3, 57, 73);
 }
 
-aside .image-contact {
+aside .image.contact {
   background-image: url("../images/iw5dcnit-3bvy04a.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px;
-  width: 400px;
-  margin: 1em 1em 0 0;
-  border: 1px solid rgb(3, 57, 73);
 }
-
-/* DEPRECATED
-section h4 {
-  font-weight: bold;
-  font-size: 1.4em;
-  text-transform: none;
-}
-*/
 
 /* media container blue section*/
 .media-container {
@@ -359,8 +335,7 @@ section h4 {
 }
 
 .adjust-skew {
-  /* adjust the child elements */
-  transform: skewY(2deg);
+  transform: skewY(2deg);  /* adjust the child elements */
 }
 
 .media-container h3 {
@@ -375,11 +350,8 @@ section h4 {
 }
 
 /* gallery images in index.html */
-.gallery {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
+
+
 
 .block {
   border: 1px solid rgb(3, 57, 73);
@@ -564,36 +536,40 @@ li.none {
 
 /* registration form */
 .form {
-  margin: 1.6em 1.8em;
+  margin: 1.6em;
   font-size: 120%;
 }
 
-.form-col {
+form .flex-row {
   display: flex;
-  flex-direction: column;
-  padding-bottom: 0.8em;
+  width: 100%;
+  padding-bottom: 1em;
+  flex-grow: 1;
 }
 
-.form-col h3 {
+form .flex-col {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1em;
+}
+
+form .flex-col h3 {
   margin-bottom: 0.6em;
   font-size: 1.2em;
   font-family: "Montserrat", sans-serif;
 }
 
-.form-col h4 {
+form .flex-col h4 {
   margin-bottom: 0.6em;
   font-size: 1em;
   font-family: "Montserrat", sans-serif;
 }
 
-.form-row {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 0.8em;
-  flex-grow: 1;
-}
 
-.form-row input {
+
+
+
+form .flex-row input {
   margin-left: 1em;
 }
 
@@ -603,15 +579,9 @@ input:focus {
 
 input[type="text"],
 input[type="email"],
-input[type="date"] {
-  flex-grow: 1;
-  min-width: 20px;
-  margin-right: 1em;
-  border-bottom: 1px solid rgba(3, 57, 73, 0.507);
-}
-
+input[type="date"],
 input[type="tel"] {
-  flex-grow: 0.5;
+  flex-grow: 1;
   min-width: 20px;
   margin-right: 1em;
   border-bottom: 1px solid rgba(3, 57, 73, 0.507);
@@ -644,50 +614,10 @@ span input[type="checkbox"] {
   height: 0.8em;
 }
 
-input[type="radio"].grade {
+input[type="radio"].radiobut {
   margin: 0 0.4em 0 1.2em;
   width: 1em;
   height: 1em;
-}
-
-button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #67a12d;
-  border: none;
-  color: #ffffff;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin-top: 1em;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: "\00bb";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
 }
 
 label {
@@ -714,6 +644,89 @@ label {
   flex-grow: 0.02;
 }
 
+
+
+.sub-button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #67a12d;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.sub-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.sub-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.sub-button:hover span {
+  padding-right: 25px;
+}
+
+.sub-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.res-button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #a12d2d;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+.res-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.res-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.res-button:hover span {
+  padding-right: 25px;
+}
+
+.res-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 /* Output registration form */
 
 table.output {
@@ -736,21 +749,13 @@ table.output td.td-right {
 }
 
 /* FOOTER */
-.footer-container {
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  text-align: center;
-  flex-wrap: wrap;
-  padding: 0em 0 1em 0;
-}
 
-.footer-container a {
+footer a {
   text-decoration: none;
   color: #ffffff;
 }
 
-.footer-container a:hover {
+footer a:hover {
   color: rgb(164, 255, 74);
 }
 
