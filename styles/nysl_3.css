@@ -488,50 +488,50 @@ ol {
   margin-left: 1.2em;
 }
 
-.squared-list {
-  list-style-type: square;
+.squared-namesClass {
+  namesClass-style-type: square;
 }
 
-.alpha-list {
-  list-style-type: lower-alpha;
+.alpha-namesClass {
+  namesClass-style-type: lower-alpha;
   text-indent: 0em;
 }
 
-ol.alpha-list {
+ol.alpha-namesClass {
   margin-left: 2em;
 }
 
-ol.alpha-list li {
+ol.alpha-namesClass li {
   padding-bottom: 0;
 }
 
-.circled-list {
-  list-style-type: circle;
+.circled-namesClass {
+  namesClass-style-type: circle;
   text-indent: 0em;
 }
 
-ol.numbered-list {
+ol.numbered-namesClass {
   counter-reset: item;
   margin-left: 2em;
   text-indent: -1em;
 }
 
-ol.numbered-list > li {
+ol.numbered-namesClass > li {
   counter-increment: item;
-  list-style-type: none;
+  namesClass-style-type: none;
 }
 
-ol.numbered-list > li:before {
+ol.numbered-namesClass > li:before {
   font-weight: bold;
   content: counter(item) ".";
 }
 
-.numbered-list li {
+.numbered-namesClass li {
   padding-bottom: 1em;
 }
 
 li.none {
-  list-style-type: none;
+  namesClass-style-type: none;
 }
 
 /* registration form */
