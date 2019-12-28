@@ -97,8 +97,6 @@ li {
   flex-direction: column;
 }
 
-
-
 /* END GLOBAL */
 
 /* local styles */
@@ -166,7 +164,7 @@ li {
 .title {
   font-family: "soccer-collage";
   color: rgb(3, 57, 73);
-  font-size: 4.6em;
+  font-size: 400%;
   font-weight: normal;
 }
 
@@ -273,7 +271,6 @@ article h3 {
   text-transform: none;
 }
 
-
 section h4 {
   font-size: 1.6em;
   font-style: italic;
@@ -285,8 +282,8 @@ aside .image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 20vw;
   margin: 1em 1em 0 0;
   border: 1px solid rgb(3, 57, 73);
 }
@@ -335,7 +332,7 @@ aside .image.contact {
 }
 
 .adjust-skew {
-  transform: skewY(2deg);  /* adjust the child elements */
+  transform: skewY(2deg); /* adjust the child elements */
 }
 
 .media-container h3 {
@@ -350,8 +347,6 @@ aside .image.contact {
 }
 
 /* gallery images in index.html */
-
-
 
 .block {
   border: 1px solid rgb(3, 57, 73);
@@ -489,11 +484,11 @@ ol {
 }
 
 .squared-namesClass {
-  namesClass-style-type: square;
+  namesclass-style-type: square;
 }
 
 .alpha-namesClass {
-  namesClass-style-type: lower-alpha;
+  namesclass-style-type: lower-alpha;
   text-indent: 0em;
 }
 
@@ -506,7 +501,7 @@ ol.alpha-namesClass li {
 }
 
 .circled-namesClass {
-  namesClass-style-type: circle;
+  namesclass-style-type: circle;
   text-indent: 0em;
 }
 
@@ -518,7 +513,7 @@ ol.numbered-namesClass {
 
 ol.numbered-namesClass > li {
   counter-increment: item;
-  namesClass-style-type: none;
+  namesclass-style-type: none;
 }
 
 ol.numbered-namesClass > li:before {
@@ -531,7 +526,7 @@ ol.numbered-namesClass > li:before {
 }
 
 li.none {
-  namesClass-style-type: none;
+  namesclass-style-type: none;
 }
 
 /* registration form */
@@ -564,10 +559,6 @@ form .flex-col h4 {
   font-size: 1em;
   font-family: "Montserrat", sans-serif;
 }
-
-
-
-
 
 form .flex-row input {
   margin-left: 1em;
@@ -643,8 +634,6 @@ label {
   border-bottom: 0px solid rgba(3, 57, 73, 0.507);
   flex-grow: 0.02;
 }
-
-
 
 .sub-button {
   display: inline-block;
